@@ -1,0 +1,13 @@
+{
+  "env": {
+    "NODE_ENV": "development",
+    "RESOURCE_DIR": "./functions"
+  },
+  "ignore": ["**/*.test.ts", "**/*.spec.ts", ".git", "node_modules"],
+  "watch": ["functions/src"],
+  "exec": "npm run start:funcs",
+  "execMap": {
+    "ts": "npm --prefix \"$RESOURCE_DIR\" run build:watch"
+  },
+  "ext": "ts"
+}

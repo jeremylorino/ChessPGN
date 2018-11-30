@@ -1,0 +1,27 @@
+{
+  "name": "google-drive-pgn-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run firebase -- serve --only hosting",
+    "prestart:funcs": "npm --prefix ./functions run build",
+    "start:funcs": "npm run firebase -- serve --only functions --host 0.0.0.0",
+    "watch:funcs": "./node_modules/.bin/nodemon",
+    "firebase": "./node_modules/.bin/firebase",
+    "preserve": "npm run build",
+    "serve": "npm run firebase -- serve --only hosting,functions --host 0.0.0.0",
+    "deploy:functions": "firebase deploy --only functions",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "predeploy": "npm run clean && npm run build",
+    "deploy": "npm run firebase deploy -- --only hosting,functions",
+    "clean": "npx rimraf ./build ./functions/lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "firebase-tools": "^5.1.1",
+    "nodemon": "^1.18.6"
+  }
+}

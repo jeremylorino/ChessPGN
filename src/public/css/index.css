@@ -1,0 +1,27 @@
+
+.hidden {
+  display: none !important;
+}
+
+.buttonControl:hover {
+  cursor: pointer;
+}
+
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.headerContainer>div {
+  display: flex;
+  flex-direction: row;
+}
+
+.gameList {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-family: monospace;
+  white-space: pre;
+  overflow: hidden;
+}
